@@ -11,6 +11,12 @@ class solution{
         int n= nums.size();
         int maxSum= INT_MIN;
 
+        // if all elements are negative, return the maximum element
+        if(*max_element(nums.begin() , nums.end())<0){
+            
+            return *max_element(nums.begin() , nums.end()) ;
+        }
+
         for (int i=0; i<n; i++){
             int sumOfSubarray=0;
             for (int j=i; j<n; j++){
