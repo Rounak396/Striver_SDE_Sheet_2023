@@ -21,3 +21,6 @@ class solution{
         
     }
 };
+
+// Time Complexity: O(nlogn), due to the use of sort function.
+// Space Complexity: O(1), no extra space used.
