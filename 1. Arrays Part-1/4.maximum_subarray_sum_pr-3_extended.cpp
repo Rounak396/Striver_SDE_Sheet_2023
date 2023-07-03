@@ -13,6 +13,12 @@ class solution{
         int n = nums.size();
         int max= INT_MIN, sum=0;
         int start, ansStart=0, ansEnd=0;
+
+        // if all elements are negative, return the maximum element
+        if(*max_element(nums.begin() , nums.end())<0){
+            return {*max_element(nums.begin() , nums.end())} ;
+        }
+        
         for(int i=0; i<n; i++){
             if(sum == 0){
                 start = i;
