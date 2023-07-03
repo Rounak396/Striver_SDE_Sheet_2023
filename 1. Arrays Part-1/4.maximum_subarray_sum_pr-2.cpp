@@ -13,7 +13,6 @@ class solution{
 
         // if all elements are negative, return the maximum element
         if(*max_element(nums.begin() , nums.end())<0){
-            
             return *max_element(nums.begin() , nums.end()) ;
         }
 
