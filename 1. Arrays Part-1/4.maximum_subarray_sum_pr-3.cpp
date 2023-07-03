@@ -13,11 +13,22 @@ class solution{
         int max_so_far = nums[0];
         int curr_max = nums[0];
 
-        for(int i=1; i<n; i++){
-            curr_max = max(nums[i], curr_max+nums[i]);
-            max_so_far = max(max_so_far, curr_max);
+        // process-2
+        int n = nums.size();
+        int max= INT_MIN, sum=0;
+        for(int i=0; i<n; i++){
+            sum += nums[i];
+            if(sum > max){
+                max = sum;
+            }
+            if(sum < 0){
+                sum = 0;
+            }
         }
-        return max_so_far;
+        if (max<0){
+            return 0;
+        }
+        return max;
     }
 
 };
